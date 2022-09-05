@@ -8,8 +8,11 @@ int count= -N;
 while(count <= N)
 {
     Console.Write(count + " ");
-
-    count = count + 1;
-
+    
+    count++;
 }
+if (N < 0)
+{
+    Console.WriteLine("число должно быть положительным");
+} 
 
