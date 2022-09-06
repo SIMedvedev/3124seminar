@@ -10,26 +10,20 @@ Console.Write("Введите первое число: ");
 int b = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите первое число: ");
 int c = Convert.ToInt32(Console.ReadLine());
-if(int a = maximum)
-if (b > maximum)
-{
+int max = a;
 
+if (b > max)
+
+{
+     max = b;
+    
+}
+if(c > max)
+{
+     max = c;
+    
 }
 
-if(a > b > c)
-{
-    Console.WriteLine(a);
-}
-if(b > c)
-{
-    Console.WriteLine(b);
-
-}
-
-
-else
-{
-    Console.WriteLine(c);
-}
+Console.WriteLine("max = " + max);
 
 
