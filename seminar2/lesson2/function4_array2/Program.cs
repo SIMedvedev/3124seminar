@@ -28,13 +28,13 @@ int IndexOf(int[] collection, int find)   // метод для нахожден�
 {
     int count = collection.Length;
     int index = 0;
-    int position = 0;
+    int position = -1; // если искать не существующий элемент, то выдаст -1, т.е. элемент не найден
     while (index < count)
     {
-        if (collection[index] == find);
+        if (collection[index] == find)
         {
             position = index;
-            break;
+            break; //чтобы выводил первый искомый элемент массива, если есть одинаковые
         }    
         index++;
     }
@@ -44,6 +44,8 @@ int IndexOf(int[] collection, int find)   // метод для нахожден�
 int[] array = new int[10]; // создвем массив из 10 элементов
 
 FillArray(array);
+array[4] = 4; 
+array[6] = 6; //принудительно записываем элемент массива
 PrintArray(array);
 Console.WriteLine();
 
