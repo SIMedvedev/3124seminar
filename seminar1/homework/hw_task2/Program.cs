@@ -16,7 +16,7 @@ if(nA > nB)
 else
 {
     Console.WriteLine("max = " + nB);
-    Console.WriteLine("min = " + nB);
+    Console.WriteLine("min = " + nA);
 }
 if(nA == nB)
 {
