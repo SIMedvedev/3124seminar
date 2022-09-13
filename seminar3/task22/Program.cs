@@ -7,7 +7,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 int i = 0;
 if (number > 0)
 {
-    while (i <= number)
+    while (i <= number)                 // for (int i = 0; i <= number; i++)
     {
         Console.Write(i*i + " ");
         i++;
@@ -15,5 +15,5 @@ if (number > 0)
 }
 else 
 {
-    Console.Write("Число введено не верно");
+    Console.Write("N должно быть больше 0");
 }
