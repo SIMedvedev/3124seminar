@@ -10,12 +10,12 @@ int readNumber (string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 int numberOfDigits(int n)
-{
-    int i = 0;
-    for (i = 0; n > 0; i++)
-    {
-        n = n / 10;
-    }
+{                                     // int i = o; число цифр(количество итераций цикла)
+    int i = 0;                        // if (n == 0) i = 1;
+    for (i = 0; n > 0; i++)           // while (n != 0)
+    {                                 // {n = n / 10;         
+        n = n / 10;                   // i++;}
+    }                                 // return i;                         
     return i;
 }
 int number = readNumber ("Введите число");
