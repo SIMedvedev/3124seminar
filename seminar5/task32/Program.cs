@@ -12,18 +12,17 @@ int[] GetArray(int size, int leftRange, int rightRange) //границы слу�
      }
      return arr;
  }
- int[] newArr(int[] arr)  // возвращаем массив
+ int[] newArr(int[] arr)  // возвращаем массив  // *можно вместо возвращаемого элемента int[] поставить void
  {
      
      for (int i = 0; i < arr.Length; i++)
              { 
-                arr[i] = arr[i] * -1;
+                arr[i] = arr[i] * -1; // можно написать arr[i] = - arr[i];
             }
-             return arr; 
+             return arr;                        // *тогда return будет не нужен
 }
- int[] array = GetArray(12, -9, 9);
 
- Console.WriteLine(string.Join(",", array));
-int[] newarr = newArr(array);
-
+int[] array = GetArray(12, -9, 9);
+Console.WriteLine(string.Join(",", array));
+int[] newarr = newArr(array);                   // * вызов массива будет просто newArr(array);
 Console.WriteLine(string.Join(",", newarr));
