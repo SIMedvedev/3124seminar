@@ -12,5 +12,21 @@ int[] GetArray(int size, int leftRange, int rightRange)
     }
     return arr;
 }
-int[] array = GetArray(10, 0, 5);
+int[] array = GetArray(10, 1, 20);
 Console.WriteLine(string.Join(",", array));
+int min = array[0];
+int max = array[0];
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i] > max)
+    {
+        max = array[i];
+    }
+    else if (array[i] < min)
+    {
+        min = array[i];
+    }
+}
+
+int result = max - min;
+Console.WriteLine($"Разница между максимальным и минимальным элементом массива равна {result}");
