@@ -5,14 +5,25 @@
 
 
 
-int[] arr = {1, 2, 3, 4, 5, 6, 7};
-int[] arr2 = new int [(arr.Length + 1) / 2];
+int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+int[] arr2 = new int[(arr.Length + 1) / 2];
 for (int i = 0; i < arr2.Length; i++)
 {
-    arr2[i] = arr[i] * arr[arr.Length - i - 1]; 
+    arr2[i] = arr[i] * arr[arr.Length - i - 1];
 }
 if (arr.Length % 2 != 0)
 {
     arr2[arr2.Length - 1] = arr[arr.Length / 2];
 }
-Console.Write(string.Join(",",arr2));
+Console.Write(string.Join(",", arr2));
+
+//альтернативный вариант
+// 
+// for (int i = 0; i < arr2.Length; i++)
+// {
+//     arr2[i] = arr[i] * arr[arr.Length - i - 1];
+//     if (i == arr.Length -1 -i)
+//     {
+//         arr2[i] = arr[i];
+//     }
+// }
