@@ -10,15 +10,25 @@ Console.WriteLine(message);
 return Convert.ToInt32(Console.ReadLine());
 }
 
-int Fibonacci
+void PrintFiboTon (int n)
+{   
+    if (n >= 2)
+    {
+        int[] fibo = new int[n];
+        fibo[0] = 0;
+        fibo[1] = 1;
+        for (int i = 2; i < fibo.Length; i++)
+        {
+            fibo[i] = fibo[i - 1] + fibo[i - 2];
+        }
+        Console.WriteLine(string.Join(" ", fibo));
+    }
+    else
+    {
+        Console.WriteLine("N должно быть > 2");
+    }
+}
 
-//n = int(input())
-n1 = 0
-n2 = 1 
-k = 0
-print (n1, n2, end = ' ')
-for i in range(n):
-    k = n1 +n2
-    n1 = n2
-    n2 = k
-    print (k, end =' ')
+
+int number =  ReadNumber("Введите N");
+PrintFiboTon(number);
