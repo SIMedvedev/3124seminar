@@ -7,28 +7,28 @@
 
 double[,] GetMatrix(int size1, int size2) // Наполнение массива случайными вещественными числами.
 {
-  double[,] matrix = new double[size1, size2];
-  Random rand = new Random();
-  for (int i = 0; i < size1; i++)
-  {
-    for (int j = 0; j < size2; j++)
+    double[,] matrix = new double[size1, size2];
+    Random rand = new Random();
+    for (int i = 0; i < size1; i++)
     {
-      matrix[i, j] = Math.Round(rand.NextDouble() * 20 - 10, 1);
+        for (int j = 0; j < size2; j++)
+        {
+            matrix[i, j] = Math.Round(rand.NextDouble() * 20 - 10, 1);
+        }
     }
-  }
-  return matrix;
+    return matrix;
 }
 
 void PrintMatrix(double[,] matrix) // Вывод массива в терминал.
 {
-  for (int i = 0; i < matrix.GetLength(0); i++)
-  {
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-      Console.Write($"{matrix[i, j]}\t");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"{matrix[i, j]}\t");
+        }
+        Console.WriteLine();
     }
-    Console.WriteLine();
-  }
 }
 
 

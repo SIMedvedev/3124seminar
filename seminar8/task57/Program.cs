@@ -16,7 +16,7 @@ int ReadNumber(string message) // Ввод числа из консоли.
   return Convert.ToInt32(Console.ReadLine());
 }
 
-int[,] GetMatrix(int rows, int columns, int leftRange = 0, int rightRange = 9) // Наполнение массива случайными числами.
+int[,] GetMatrix(int rows, int columns, int leftRange = 0, int rightRange = 10) // Наполнение массива случайными числами.
 {
   int[,] matrix = new int[rows, columns];
   Random rand = new Random();
@@ -42,10 +42,10 @@ void PrintMatrix(int[,] matrix) // Вывод массива в терминал
   }
 }
 
-void CountElementsOfMatrix(int[,] matrix) // Подсчет количества каждого элемента матрицы
+void CountElementsMatrix(int[,] matrix) 
 {
   int count = 0;
-  for (int k = 0; k < 10; k++)
+  for (int k = 0; k <= 10; k++)
   {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -70,4 +70,4 @@ int[,] matr = GetMatrix(m, n);
 Console.WriteLine("Исходная матрица:");
 PrintMatrix(matr);
 Console.WriteLine();
-CountElementsOfMatrix(matr);
+CountElementsMatrix(matr);

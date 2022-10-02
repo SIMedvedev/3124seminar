@@ -34,18 +34,18 @@ int number = Convert.ToInt32(userNumber);
 
 if (Math.Abs(number) <= 99999 && Math.Abs(number) > 9999)
 {
-  if (userNumber[0] == userNumber[4] && userNumber[1] == userNumber[3])
-  {
-    Console.WriteLine("Да. Число является палиндромом");
-  }
-  else
-  {
-    Console.WriteLine("Нет. Число не палиндром");
-  }
+    if (userNumber[0] == userNumber[4] && userNumber[1] == userNumber[3])
+    {
+        Console.WriteLine("Да. Число является палиндромом");
+    }
+    else
+    {
+        Console.WriteLine("Нет. Число не палиндром");
+    }
 }
 else
 {
-  Console.WriteLine("Число введено некорректно!");
+    Console.WriteLine("Число введено некорректно!");
 }
 
 
