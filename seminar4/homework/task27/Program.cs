@@ -13,11 +13,11 @@ while (number != 0)
 }
 Console.WriteLine(Math.Abs(SumDigit));
 
-int ReadNumber(string message) //Метод для ввода числа из консоли
-{
-  Console.WriteLine(message);
-  return Convert.ToInt32(Console.ReadLine());
-}
+// int ReadNumber(string message) //Метод для ввода числа из консоли
+// {
+//   Console.WriteLine(message);
+//   return Convert.ToInt32(Console.ReadLine());
+// }
 
 
 // int SumDigits(int number) //Метод для подсчета суммы цифр в числе

@@ -5,19 +5,33 @@
 // 1 -3,3 8 -9,9
 // 8 7,8 -7,1 9
 
-double[,] GetMatrix(int size1, int size2) // Наполнение массива случайными вещественными числами.
+double[,] GetMatrix(int rows, int columns, int leftRange = -10, int rightRange = 10) // Наполнение массива случайными вещественными числами.
 {
-    double[,] matrix = new double[size1, size2];
+    double[,] matrix = new double[rows, columns];
     Random rand = new Random();
-    for (int i = 0; i < size1; i++)
+    for (int i = 0; i < rows; i++)
     {
-        for (int j = 0; j < size2; j++)
+        for (int j = 0; j < columns; j++)
         {
-            matrix[i, j] = Math.Round(rand.NextDouble() * 20 - 10, 1);
+            matrix[i, j] = Math.Round(rand.NextDouble() * (rightRange - leftRange) + leftRange, 1);
         }
     }
     return matrix;
 }
+
+// double[,] GetMatrix(int size1, int size2) // Наполнение массива случайными вещественными числами.
+// {
+//     double[,] matrix = new double[size1, size2];
+//     Random rand = new Random();
+//     for (int i = 0; i < size1; i++)
+//     {
+//         for (int j = 0; j < size2; j++)
+//         {
+//             matrix[i, j] = Math.Round(rand.NextDouble() * 20 - 10, 1);
+//         }
+//     }
+//     return matrix;
+// }
 
 void PrintMatrix(double[,] matrix) // Вывод массива в терминал.
 {
@@ -25,7 +39,7 @@ void PrintMatrix(double[,] matrix) // Вывод массива в термин�
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i, j]}\t");
+            Console.Write($"{matrix[i, j]}\t"); // ("{0:f1}", matrix[i, j]) один знак после запятой
         }
         Console.WriteLine();
     }
