@@ -13,7 +13,9 @@ int[] GetArray(int size, int leftRange, int rightRange)
     }
     return arr;
 }
-int[] array = GetArray(10, 0, 5);
+Console.WriteLine("Введите длину массива: "); 
+int size = Convert.ToInt32(Console.ReadLine()); 
+int[] array = GetArray(size, 0, 5);
 Console.WriteLine(string.Join(",", array));
 int count = 0;
 for (int i = 1; i < array.Length; i +=2)
@@ -21,3 +23,6 @@ for (int i = 1; i < array.Length; i +=2)
     count = count + array[i]; 
 }
 Console.WriteLine("Сумма элементов чисел равна " + count);
+
+
+
